@@ -7,35 +7,38 @@
   <link rel="shortcut icon" href="/bansi-portfolio/assets/b-WzPtDAk3.png" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bansi Gadhiya | Front-End Developer Specializing in React & Redux</title>
-  <script type="module" crossorigin src="/bansi-portfolio/assets/index-mob4CIOX.js"></script>
-  <link rel="stylesheet" crossorigin href="/bansi-portfolio/assets/index-c4zbtNMp.css">
+  <script type="module" crossorigin src="/bansi-portfolio/assets/index-IPZUqotU.js"></script>
+  <link rel="stylesheet" crossorigin href="/bansi-portfolio/assets/index-KAoJ03H4.css">
 </head>
 
 <body>
   <div id="root"></div>
-  <!-- <script>
-    const eye = $(".face__eye-ball");
-console.log(eye);
-    document.addEventListener("mousemove", () => {
-      let x = (event.clientX * 100) / window.innerWidth + "%";
-      let y = (event.clientY * 100) / window.innerHeight + "%";
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    var card = document.querySelector(".card");
 
-      for (let i = 0; i < 2; i++) {
-        eye[i].style.left = x;
-        eye[i].style.top = y;
-        eye[i].style.transform = "translate(-" + x + ",-" + y + ")";
-      }
+    document.querySelector(card).on("mousemove", function (e) {
+      var ax = -(document.querySelector(card).innerWidth() / 2 - e.pageX) / 20;
+      var ay = (document.querySelector(card).innerHeight() / 2 - e.pageY) / 10;
+      card.attr(
+        "style",
+        "transform: rotateY(" +
+        ax +
+        "deg) rotateX(" +
+        ay +
+        "deg);-webkit-transform: rotateY(" +
+        ax +
+        "deg) rotateX(" +
+        ay +
+        "deg);-moz-transform: rotateY(" +
+        ax +
+        "deg) rotateX(" +
+        ay +
+        "deg)"
+      );
     });
-
-    //mouth style class
-    $(".sns-btn").on("mouseover", () => {
-      $(".face__mouth").addClass("hover");
-    });
-
-    $(".sns-btn").on("mouseleave", () => {
-      $(".face__mouth").removeClass("hover");
-    });
-  </script> -->
+  </script>
 </body>
 
 </html>
