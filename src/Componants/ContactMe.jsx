@@ -29,7 +29,7 @@ const ContactMe = () => {
                 <h1 className='font-bold uppercase m-0 leading-[40px]'>Get in Touch</h1>
                 <p className='text-base text-primary font-medium'>Let's discuss your project or just say hello.</p>
             </div>
-            <div className='flex items-center justify-center mb-10'>
+            <div className='flex items-center justify-center p-4 border mb-10'>
                 <div className='w-1/2 rounded-xl'>
                     <form ref={form} onSubmit={sendEmail} className='space-y-4 text-sm'>
                         <div>

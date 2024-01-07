@@ -4,9 +4,9 @@ import { ChevronsRight } from 'feather-icons-react/build/IconComponents';
 
 const Slider = () => {
     return (
-        <div className='slider h-[600px]'>
-            <div className='flex w-full items-center'>
-                <div className='w-1/2 h-[600px] flex items-center justify-center'>
+        <div className='slider h-full lg:h-[600px]'>
+            <div className='flex w-full flex-wrap lg:flex-nowrap items-center'>
+                <div className='w-full lg:w-1/2 h-[450px] lg:h-[600px] flex items-center justify-center'>
                     <div className='px-10'>
                         <p className='capitalize text-[#876451] font-medium text-[20px] mb-1'>Shaping the Web</p>
                         <span className='uppercase block text-[70px] leading-[60px] font-bold'>Bansi gadhiya</span>
@@ -19,7 +19,7 @@ const Slider = () => {
                         </a>
                     </div>
                 </div>
-                <div className='w-1/2 px-10'>
+                <div className='w-full lg:w-1/2 px-10'>
                     <div className='relative'>
                         <div className="img-border shadow-2xl"></div>
                         <div className="slider-img">
