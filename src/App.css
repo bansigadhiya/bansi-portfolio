@@ -273,130 +273,75 @@ svg {
   }
 }
 
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
-/* * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100%;
+.card {
+  position: relative;
   width: 100%;
-} */
-
-/* body {
-  font-family: "Roboto", sans-serif;
+  height: 350px;
+  background: linear-gradient(90deg, rgba(251,220,234,1) 0%, rgba(189,218,251,1) 100%);
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #a4978e;
-} */
-
-.field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.face {
-  width: 210px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin-bottom: 96px;
-}
-
-.face__eye {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background-color: #fff;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.face__eye-ball {
-  width: 20px;
-  height: 20px;
-  background-color: #333;
-  border-radius: 50%;
+.card::before,
+.card::after {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  content: "";
+  z-index: 10;
+  width: 20%;
+  height: 20%;
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  transition: all 0.5s;
 }
 
-.face__nose {
-  width: 50px;
-  height: 20px;
-  background-color: #5f5852;
-  border-radius: 50%;
-  position: absolute;
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.card::after {
   bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
+  left: 0;
+  border-radius: 0 100%  0 15px;
 }
 
-.face__mouth {
-  width: 50px;
-  height: 40px;
+.card:hover::after,
+.card:hover::before {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+.card .card-content{
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.card-hover-content{
+  opacity: 0;
   position: absolute;
-  bottom: 0px;
-  border-radius: 50%;
-  background-color: #be3144;
-  transition: 0.4s;
-}
-
-.face__mouth.hover {
-  height: 50px;
-  width: 100px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
-}
-
-.eye-wrap {
+  left: 0;
+  top: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+  height: 100%;
+  visibility: hidden;
+  transition: all 0.3s;
+  perspective: 5000px;
+  border-radius: 15px;
+  padding: 20px;
 }
-
-.sns-btn {
-  width: 100%;
-  height: 50px;
+.card:hover .card-hover-content {
+  opacity: 1;
+  visibility: visible;
   display: flex;
+  perspective: 5000px;
   align-items: center;
-  padding: 0px 28px;
-  border-radius: 30px;
-  background-color: #55acee;
-  border: none;
-  text-decoration: none;
-  transition: all 0.1s linear;
-}
-
-.sns-btn:hover {
-  transform: scale(1.1);
-}
-
-.sns-btn:active {
-  transform: scale(0.9);
-}
-
-.sns-btn__icon {
-  color: #fff;
-  font-size: 26px;
-  margin-right: 16px;
-}
-
-.sns-btn__body {
-  color: #fff;
-  font-size: 26px;
-  letter-spacing: 0.1em;
-  margin: 0px;
+  justify-content: center;
+  z-index: 99;
+  box-shadow: 5px 5px 20px 8px rgba(255,255,255,0.8);
 }

@@ -5,6 +5,7 @@ import AboutMe from './AboutMe'
 import Launguages from './Launguages'
 import Animation from './Animation'
 import ContactMe from './ContactMe'
+import Project from './Project'
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
                 <Slider />
                 <AboutMe />
                 <Launguages />
+                <Project />
                 <ContactMe />
                 {/* <Animation /> */}
             </div>
