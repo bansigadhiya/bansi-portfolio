@@ -7,7 +7,6 @@ const ContactMe = () => {
     const [isSuccess, setIsSuccess] = useState(false)
     const sendEmail = (e) => {
         e.preventDefault();
-        // console.log(form.current);
         const formData = new FormData(e.target);
         emailjs.sendForm('service_kwkp1ur', 'template_td713vp', form.current, '6XPwsCk_hhQysxr9e')
             .then((result) => {
@@ -25,11 +24,11 @@ const ContactMe = () => {
                     </Alert>
                 </Snackbar>
             }
-            <div className='text-center mb-[40px]'>
+            <div className='text-center mb-[10px]'>
                 <h1 className='font-bold uppercase m-0 leading-[40px]'>Get in Touch</h1>
                 <p className='text-base text-primary font-medium'>Let's discuss your project or just say hello.</p>
             </div>
-            <div className='flex items-center justify-center p-4 border mb-10'>
+            <div className='flex items-center justify-center p-4 mb-10'>
                 <div className='w-1/2 rounded-xl'>
                     <form ref={form} onSubmit={sendEmail} className='space-y-4 text-sm'>
                         <div>
@@ -44,7 +43,7 @@ const ContactMe = () => {
                         <div>
                             <textarea name="message" required placeholder='Your message' className='py-3.5 outline-none focus:border-gray-500 block w-full rounded-xl px-4 border border-gray-300' />
                         </div>
-                        <button className='uppercase btn hover:shadow-lg flex items-center' type="submit">
+                        <button className='mt-[20px] group uppercase about-btn btn hover:shadow-md hover:shadow-slate-300 inline-flex items-center' type="submit">
                             Send message
                             <div className="btn-bg"></div>
                         </button>

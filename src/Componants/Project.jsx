@@ -9,7 +9,7 @@ const Project = () => {
                 <p className='text-base text-primary font-medium'>ShopEasy.ai:- AI-powered E-commerce Made Easy</p>
             </div>
             <p className='text-center text-black text-sm w-[80%] my-4 mx-auto'>ShopEasy.ai is a revolutionary AI-powered e-commerce platform that simplifies online shopping for both businesses and consumers. It leverages AI technology to personalize product recommendations, streamline checkout processes, and optimize the overall shopping experience.</p>
-            <div className='grid grid-cols-4 gap-6 w-full'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full'>
                 <div className='card w-full'>
                     <div className='card-content w-full'>
                         <h4 className='uppercase block text-2xl mb-4 font-semibold text-black'>my role</h4>
